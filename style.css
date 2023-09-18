@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --roboto: "Roboto", sans-serif;
+    --font-normal: 400;
+    --font-bold: 700;
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    place-items: center;
+    background: var(--charcoal-grey);  
+    font-family: var(--roboto); 
+    color: var(--dark-slate-grey);
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    gap: 1.5rem;
+    padding: 25px;
+    border-radius: 25px;
+    background-color: var(--white);
+    font-size: 1rem;
+}
+
+.description-box, .description-box div, .list-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.description-box {
+    margin: 0 .5rem;
+}
+
+.description-box div {
+    gap: .8rem; 
+}
+
+.input-section input, .input-section button, .success-message button {
+    height: 3.5rem;
+    border-radius: 8px;
+}
+
+.input-section button, .success-message button {
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    border: none;
+}
+
+.input-section input {
+    border: 1px solid gray;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.image-section img {
+    max-height: 475px;
+}
+
+#email-field {
+    margin-top: max(1rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 0;
+}
+
+.valid-email {
+    display: none;
+    color: var(--tomato);
+    font-size: .8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px var(--tomato);
+}
+
+.success-message {
+    margin: 0 auto;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 15px;
+    background-color: var(--white);
+    width: min(370px, 100%);
+    padding: 2.5rem;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.success-message img {
+    width: 3rem;
+    height: 3rem;
+}
+
+#email-output {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 550px) {
+    main {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .image-section img{
+        max-height: 100%;
+        width: 100%;
+    }
+    .description-box {
+        height: 90vh;
+    }
+    
+}
